@@ -959,7 +959,6 @@ module AntmediaClient
     # @return [nil]
     def get_broadcast(id, opts = {})
       get_broadcast_with_http_info(id, opts)
-      nil
     end
 
     # Get broadcast object
@@ -997,7 +996,8 @@ module AntmediaClient
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'Object')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastRestServiceApi#get_broadcast\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
